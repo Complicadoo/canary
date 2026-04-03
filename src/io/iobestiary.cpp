@@ -136,8 +136,8 @@ bool IOBestiary::parseDefensiveCharmCombat(const std::shared_ptr<Charm> &charm, 
 			return true;
 		}
 		case CHARM_DODGE: {
-			const Position &targetPos = target->getPosition();
-			g_game().addMagicEffect(targetPos, charm->effect);
+			const Position &playerPos = player->getPosition();
+			g_game().addMagicEffect(playerPos, charm->effect);
 			break;
 		}
 		case CHARM_ADRENALINE: {

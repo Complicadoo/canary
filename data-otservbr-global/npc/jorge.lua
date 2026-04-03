@@ -57,6 +57,7 @@ local function onReleaseFocus(npc, creature)
 	local playerId = creature:getId()
 end
 
+
 local items = {
 	[1] = { name = "Abacus", id = 19151 },
 	[2] = { name = "Assassin Doll", id = 28897 },

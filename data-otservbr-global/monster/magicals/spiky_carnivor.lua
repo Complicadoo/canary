@@ -73,7 +73,11 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "Zuumsh!!!", yell = false },
+	{ text = "The lumbering fortress!", yell = false },
 }
+
+
 
 monster.loot = {
 	{ name = "platinum coin", chance = 66230, maxCount = 6 },
@@ -96,16 +100,19 @@ monster.loot = {
 	{ name = "shockwave amulet", chance = 150 },
 }
 
-monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = -200, maxDamage = -400 },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -230, maxDamage = -380, radius = 4, effect = CONST_ME_GROUNDSHAKER, target = false },
+-- editado para o mais próximo possível ao tibia original
+monster.attacks = { 
+	{ name = "melee", interval = 2000, chance = 100, minDamage = -100, maxDamage = -310, condition = { type = CONDITION_POISON, totalDamage = 200, interval = 4000 } },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -180, maxDamage = -230, radius = 4, effect = CONST_ME_GROUNDSHAKER, target = false },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -110, maxDamage = -170, length = 2, spread = 0, effect = CONST_ME_SMOKE, target = true },
+    { name = "Generic T Shape Smoke", interval = 2000, chance = 10, minDamage = -190, maxDamage = -230, target = true }, --animação custom, tem que ter o arquivo "spiky_t_shape.lua"
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -100, maxDamage = -170, length = 6, spread = 0, effect = CONST_ME_POISONAREA, target = true },
 }
 
 monster.defenses = {
 	defense = 20,
 	armor = 71,
 	mitigation = 1.94,
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 150, maxDamage = 200, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 
 monster.reflects = {

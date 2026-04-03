@@ -33,7 +33,7 @@ Blessings.All = {
 	[8] = { id = 8, name = "Blood of the Mountain", charm = 25361, type = Blessings.Types.ENHANCED, losscount = true, inquisition = false },
 }
 
-Blessings.LossPercent = {
+Blessings.LossPercent = { -- a parte de skills não funciona, para alterar esses valores, somente através da source
 	[0] = { item = 100, skill = 0 },
 	[1] = { item = 70, skill = 8 },
 	[2] = { item = 45, skill = 16 },
@@ -41,8 +41,8 @@ Blessings.LossPercent = {
 	[4] = { item = 10, skill = 32 },
 	[5] = { item = 0, skill = 40 },
 	[6] = { item = 0, skill = 48 },
-	[7] = { item = 0, skill = 56 },
-	[8] = { item = 0, skill = 56 },
+	[7] = { item = 0, skill = 100 },
+	[8] = { item = 0, skill = 100 },
 }
 
 --[=====[

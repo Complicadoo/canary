@@ -91,6 +91,7 @@ monster.loot = {
 	{ name = "ratana", chance = 4280 },
 	{ name = "werehyaena talisman", chance = 750 },
 	{ name = "werehyaena trophy", chance = 190 },
+	{ name = "moonlight crystals", chance = 1000 },
 }
 
 monster.attacks = {

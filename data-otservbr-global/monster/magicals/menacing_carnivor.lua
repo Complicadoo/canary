@@ -73,7 +73,9 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "Vroosh!!!", yell = false },
 }
+
 
 monster.loot = {
 	{ name = "platinum coin", chance = 65410, maxCount = 8 },
@@ -101,17 +103,20 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = -300, maxDamage = -450 },
-	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -180, length = 4, spread = 0, effect = CONST_ME_SMOKE, target = false },
-	{ name = "combat", interval = 2000, chance = 14, type = COMBAT_LIFEDRAIN, minDamage = -100, maxDamage = -200, length = 4, spread = 0, effect = CONST_ME_POISONAREA, target = false },
-	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = -150, maxDamage = -330, radius = 4, effect = CONST_ME_GROUNDSHAKER, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -370, condition = { type = CONDITION_POISON, totalDamage = 200, interval = 4000 } }, -- Corpo a corpo (0-370) 
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -170, maxDamage = -230, range = 6, effect = CONST_ME_EXPLOSIONAREA, target = true }, --BaBerserkll (170-230)
+	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = 0, range = 8, shootEffect = CONST_ANI_EARTH, effect = CONST_ME_DRAWBLOOD, target = true }, --SÓ ANIMAÇÃO
+	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -140, maxDamage = -200, range = 3, shootEffect = CONST_ANI_SMALLSTONE, target = true }, -- Ball (140-200)
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -110, maxDamage = -180, length = 2, spread = 0, effect = CONST_ME_SMOKE, target = true }, -- Beam (110-180)
+    { name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -280, radius = 4, effect = CONST_ME_GROUNDSHAKER, target = false }, -- Whirlwind Throw (0-280)
+    { name = "combat", interval = 2000, chance = 20, type = COMBAT_EARTHDAMAGE, minDamage = -170, maxDamage = -250, length = 7, spread = 0, effect = CONST_ME_POISONAREA, target = false }, --Beam (170-250)
+	{ name = "Generic T Shape Smoke", interval = 2000, chance = 10, minDamage = -160, maxDamage = -230, target = true }, --animação custom, tem que ter o arquivo "spiky_t_shape.lua + AREA DA ANIMAÇÃO 3X3" Wave (160-230)
 }
 
 monster.defenses = {
 	defense = 0,
 	armor = 68,
 	mitigation = 1.88,
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 150, maxDamage = 200, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 
 monster.reflects = {

@@ -103,7 +103,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 		end
 
 		player:addAchievementProgress("Potion Addict", 100000)
-		target:say("Aaaah...", MESSAGE_POTION)
+		target:say("Aaaah...", TALKTYPE_MONSTER_SAY)
 
 		local deactivatedFlasks = player:kv():get("talkaction.potions.flask") or false
 		if not deactivatedFlasks then
@@ -119,7 +119,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 
 	if potion.func then
 		potion.func(player)
-		player:say("Aaaah...", MESSAGE_POTION)
+		player:say("Aaaah...", TALKTYPE_MONSTER_SAY)
 		player:getPosition():sendMagicEffect(potion.effect)
 
 		if potion.achievement then
@@ -129,7 +129,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 
 	if potion.condition then
 		player:addCondition(potion.condition)
-		player:say(potion.text, MESSAGE_POTION)
+		player:say(potion.text, TALKTYPE_MONSTER_SAY)
 		player:getPosition():sendMagicEffect(potion.effect)
 	end
 

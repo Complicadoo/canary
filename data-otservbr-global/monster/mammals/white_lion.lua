@@ -66,6 +66,9 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "Groarrr!", yell = false },
+	{ text = "Roarrr!", yell = false },
+	{ text = "Growl!", yell = false },	
 }
 
 monster.loot = {
@@ -84,10 +87,10 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 0, minDamage = 0, maxDamage = -300 },
-	{ name = "combat", interval = 2000, chance = 0, type = COMBAT_HOLYDAMAGE, minDamage = -300, maxDamage = -400, range = 1, effect = CONST_ME_HOLYAREA, target = false },
-	{ name = "combat", interval = 2000, chance = 0, type = COMBAT_HOLYDAMAGE, minDamage = -250, maxDamage = -350, range = 1, radius = 2, effect = CONST_ME_HOLYAREA, target = false },
-	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -250, maxDamage = -350, range = 1, radius = 2, effect = CONST_ME_EXPLOSIONAREA, target = false },
+    { name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -350 },
+    { name = "combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -50, maxDamage = -380, range = 1, radius = 2, effect = CONST_ME_HOLYAREA, target = false },
+    { name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = 0, condition = { type = CONDITION_BLEED, totalDamage = 200, interval = 4000 }, range = 1, radius = 2, effect = CONST_ME_DRAWBLOOD, target = false },
+    { name = "combat", interval = 2000, chance = 10, type = COMBAT_FIREDAMAGE, minDamage = -50, maxDamage = -350, range = 1, radius = 2, effect = CONST_ME_EXPLOSIONAREA, target = false },
 }
 
 monster.defenses = {

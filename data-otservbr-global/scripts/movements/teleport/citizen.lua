@@ -15,7 +15,8 @@ local config = {
 	[9240] = TOWNS_LIST.GRAY_BEACH,
 	[9510] = TOWNS_LIST.RATHLETON,
 	[9500] = TOWNS_LIST.ROSHAMUUL,
-	[9515] = TOWNS_LIST.ISSAVI,
+	[9600] = 1,  -- esse número fica no remeres, no {"edit towns" (ctrl + t)}
+	[9700] = 33, -- esse número fica no remeres, no {"edit towns" (ctrl + t)}
 }
 
 local citizen = MoveEvent()

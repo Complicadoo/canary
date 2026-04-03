@@ -1523,8 +1523,7 @@ void PlayerWheel::sendOpenWheelWindow(NetworkMessage &msg, uint32_t ownerId) {
 		msg.add<uint16_t>(getPointsBySlotType(slot));
 	}
 	addPromotionScrolls(msg);
-	const auto monkQuestBonus = std::max<int32_t>(0, g_configManager().getNumber(WHEEL_MONK_QUEST_BONUS));
-	msg.addByte(hasCompletedMonkQuest() ? static_cast<uint8_t>(std::min<int32_t>(monkQuestBonus, 0xFF)) : 0); // The Way of the Monk quest bonus
+	msg.addByte(0x00); // Unknown
 	addGems(msg);
 	addGradeModifiers(msg);
 
@@ -1927,11 +1926,6 @@ uint16_t PlayerWheel::getExtraPoints() const {
 		totalBonus += extraPoints;
 	}
 
-	if (hasCompletedMonkQuest()) {
-		const auto monkQuestBonus = std::max<int32_t>(0, g_configManager().getNumber(WHEEL_MONK_QUEST_BONUS));
-		totalBonus += static_cast<uint16_t>(std::min<int32_t>(monkQuestBonus, 0xFFFF));
-	}
-
 	return totalBonus;
 }
 
@@ -1996,15 +1990,6 @@ bool PlayerWheel::canOpenWheel() const {
 	}
 
 	return true;
-}
-
-bool PlayerWheel::hasCompletedMonkQuest() const {
-	if (m_player.getPlayerVocationEnum() != Vocation_t::VOCATION_MONK_CIP) {
-		return false;
-	}
-
-	const auto requiredShrines = std::max<int32_t>(1, g_configManager().getNumber(MONK_QUEST_TOTAL_SHRINES));
-	return m_player.getStorageValue(STORAGEVALUE_WAY_OF_THE_MONK_SHRINES_COUNT) >= requiredShrines;
 }
 
 uint8_t PlayerWheel::getOptions(uint32_t ownerId) const {

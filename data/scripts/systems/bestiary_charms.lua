@@ -26,7 +26,7 @@ local charms = {
 		messageServerLog = true,
 		effect = CONST_ME_HITBYFIRE,
 		points = { 400, 600, 2000 },
-	},
+	},	
 	-- Poison charm
 	[3] = {
 		name = "Poison",
@@ -113,7 +113,7 @@ local charms = {
 		type = CHARM_DEFENSIVE,
 		chance = { 5, 10, 11 },
 		messageCancel = "You dodged an attack. (dodge charm)",
-		effect = CONST_ME_POFF,
+		effect = CONST_ME_DODGE,
 		points = { 240, 360, 1200 },
 	},
 	-- Adrenaline Burst charm
@@ -232,10 +232,10 @@ local charms = {
 		description = "Prevents creatures from fleeing due to low health for 30 seconds.",
 		category = CHARM_MINOR,
 		type = CHARM_PASSIVE,
-		chance = { 30, 45, 60 },
+		chance = { 30, 45, 100 }, -- chance = { 30, 45, 60 },
 		messageCancel = "Your enemy is not able to flee now for 30 \z
 													seconds. (fatal hold charm)",
-		points = { 100, 150, 225 },
+		points = { 100, 150, 525 }, -- points = { 100, 150, 225 },
 	},
 	-- Void Inversion charm
 	[22] = {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <items>
 	<!-- Liquids -->
     <!-- Fluid type 0 is same as water (id="1") -->
@@ -11058,7 +11058,6 @@
 		<attribute key="managain" value="12"/>
 		<attribute key="healthticks" value="6000"/>
 		<attribute key="healthgain" value="3"/>
-		<attribute key="duration" value="14400"/>
 		<attribute key="transformdeequipto" value="6529"/>
 		<attribute key="decayTo" value="6530"/>
 		<attribute key="weight" value="800"/>
@@ -29361,9 +29360,9 @@
 		<attribute key="description" value="This doll seems to be the favourite doll of the emperor. It was awarded by TibiaJourney.com"/>
 		<attribute key="weight" value="1500"/>
 	</item>
-	<item fromid="12045" toid="12046" name="music box">
+	<item fromid="12045" toid="12046" name="reward box">
 		<attribute key="primarytype" value="taming items"/>
-		<attribute key="description" value="The song inside is made of love. It was rewarded by TibiaSpace.com"/>
+		<attribute key="description" value="Uma caixa especial contendo uma recompensa mais que especial!"/>
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="12047" article="a" name="pharaoh dummy">
@@ -35984,21 +35983,32 @@
 		<attribute key="primarytype" value="creature products"/>
 		<attribute key="weight" value="70"/>
 	</item>
+
 	<item id="17828" article="a" name="pair of iron fists">
+		<attribute key="primarytype" value="fist weapons"/>
 		<attribute key="weaponType" value="fist"/>
 		<attribute key="slotType" value="dualwielding"/>
 		<attribute key="elementalbond" value="physical"/>
-		<attribute key="attack" value="23"/>
-		<attribute key="defense" value="14"/>
+		<attribute key="attack" value="38"/>
+		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="4500"/>
 		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="10"/>
-			<attribute key="unproperly" value="true"/>
-			<attribute key="weaponType" value="fist"/>
-			<attribute key="vocation" value="Monk;true, Exalted Monk"/>
+		<attribute key="imbuementslot" value="2">
+				<attribute key="elemental damage" value="3"/>
+				<attribute key="life leech" value="3"/>
+				<attribute key="mana leech" value="3"/>
+				<attribute key="critical hit" value="3"/>
+				<attribute key="skillboost fist" value="3"/>
 		</attribute>
+		<attribute key="level" value="80"/>
+		<attribute key="unproperly" value="true"/>
+		<attribute key="weaponType" value="fist"/>
+		<attribute key="vocation" value="Monk;true, Exalted Monk"/>
+		<attribute key="slot" value="hand"/>
+	</attribute>
 	</item>
-	<item id="17829" article="a" name="buckle">
+
+		<item id="17829" article="a" name="buckle">
 		<attribute key="primarytype" value="armors"/>
 		<attribute key="armor" value="12"/>
 		<attribute key="weight" value="7500"/>
@@ -53248,38 +53258,38 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 	<item id="28540" article="a" name="training sword">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="28541" article="a" name="training axe">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="28542" article="a" name="training club">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="28543" article="a" name="training bow">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="28544" article="a" name="training rod">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="28545" article="a" name="training wand">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item fromid="28546" toid="28551" name="RESERVED SPRITE"/>
 	<item id="28552" article="an" name="exercise sword">
@@ -76447,8 +76457,8 @@ Granted by TibiaGoals.com"/>
 	<item id="44064" article="an" name="training shield">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="44065" article="an" name="exercise shield">
 		<attribute key="primarytype" value="exercise weapons"/>
@@ -84485,8 +84495,8 @@ Granted by TibiaGoals.com"/>
 	<item id="50292" article="a" name="training wraps">
 		<attribute key="primarytype" value="training weapons"/>
 		<attribute key="showCharges" value="1"/>
-		<attribute key="charges" value="50"/>
-		<attribute key="weight" value="1000"/>
+		<attribute key="charges" value="5000"/>
+		<attribute key="weight" value="100"/>
 	</item>
 	<item id="50293" article="an" name="exercise wraps">
 		<attribute key="primarytype" value="exercise weapons"/>
@@ -84667,4 +84677,18 @@ Granted by TibiaGoals.com"/>
 			</attribute>
 		</attribute>
 	</item>
+ 
+   <!-- CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM -->
+
+
+	<item id="60000" article="a" name="red magic bag">
+    <attribute key="type" value="container"/> <attribute key="containersize" value="100"/>
+	<attribute key="movable" value="1" />
+    <attribute key="weight" value="100"/>
+    <attribute key="script" value="moveevent">
+        <attribute key="slot" value="backpack"/>
+    </attribute>
+   </item>
+
+
 </items>

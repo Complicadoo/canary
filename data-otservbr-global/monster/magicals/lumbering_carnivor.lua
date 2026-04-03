@@ -94,15 +94,17 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = -200, maxDamage = -500 },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -100, maxDamage = -150, radius = 4, effect = CONST_ME_GROUNDSHAKER, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300 },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -200, range = 7, shootEffect = CONST_ANI_CRYSTALLINEARROW, target = true },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -180, maxDamage = -210, length = 2, spread = 0, effect = CONST_ME_SMOKE, target = true },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_PHYSICALDAMAGE, minDamage = -160, maxDamage = -190, length = 4, spread = 0, effect = CONST_ME_SMOKE, target = true },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -190, maxDamage = -240, range = 4, shootEffect = CONST_ANI_SMALLSTONE, effect = CONST_ME_POISONAREA, target = true },
 }
 
 monster.defenses = {
 	defense = 20,
 	armor = 65,
 	mitigation = 1.82,
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 150, maxDamage = 200, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 
 monster.elements = {

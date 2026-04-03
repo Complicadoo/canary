@@ -1,5 +1,5 @@
 local condition = Condition(CONDITION_OUTFIT)
-condition:setTicks(180000)
+condition:setTicks(3600000)
 
 local spell = Spell("instant")
 

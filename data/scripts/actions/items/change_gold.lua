@@ -8,7 +8,9 @@ local changeGold = Action()
 
 function changeGold.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local coin = config[item:getId()]
-	if coin.changeTo and item.type == 100 then
+	
+	-- Alterado de item.type para item:getCount()
+	if coin.changeTo and item:getCount() == 100 then
 		item:remove()
 		player:addItem(coin.changeTo, 1)
 		return true

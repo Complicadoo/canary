@@ -76,7 +76,7 @@ local DailyRewardItems = {
 
 DailyReward = {
 	testMode = false,
-	serverTimeThreshold = (25 * 60 * 60), -- Counting down 24hours from last server save
+	serverTimeThreshold = (24 * 60 * 60), -- Counting down 24hours from last server save
 
 	storages = {
 		-- Player
@@ -106,48 +106,52 @@ DailyReward = {
 	rewards = {
 		-- day
 		[1] = {
-			type = DAILY_REWARD_TYPE_ITEM,
-			systemType = DAILY_REWARD_SYSTEM_TYPE_ONE,
-			freeAccount = 5,
-			premiumAccount = 10,
+		  type = DAILY_REWARD_TYPE_PREY_REROLL,
+			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
+			freeAccount = 3,
+			premiumAccount = 3,
 		},
 		[2] = {
-			type = DAILY_REWARD_TYPE_ITEM,
-			systemType = DAILY_REWARD_SYSTEM_TYPE_ONE,
-			freeAccount = 5,
-			premiumAccount = 10,
-		},
-		[3] = {
-			type = DAILY_REWARD_TYPE_PREY_REROLL,
-			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
-			freeAccount = 1,
-			premiumAccount = 2,
-		},
-		[4] = {
-			type = DAILY_REWARD_TYPE_ITEM,
-			systemType = DAILY_REWARD_SYSTEM_TYPE_ONE,
-			freeAccount = 10,
-			premiumAccount = 20,
-		},
-		[5] = {
-			type = DAILY_REWARD_TYPE_PREY_REROLL,
-			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
-			freeAccount = 1,
-			premiumAccount = 2,
-		},
-		[6] = {
-			type = DAILY_REWARD_TYPE_ITEM,
+	    type = DAILY_REWARD_TYPE_ITEM,
 			systemType = DAILY_REWARD_SYSTEM_TYPE_ONE,
 			items = { 28540, 28541, 28542, 28543, 28544, 28545, 44064, 50292 },
 			freeAccount = 1,
-			premiumAccount = 2,
-			itemCharges = 50,
+			premiumAccount = 1,
+			itemCharges = 5000,
 		},
-		[7] = {
+		[3] = {
+		  type = DAILY_REWARD_TYPE_XP_BOOST,
+			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
+			freeAccount = 60,
+			premiumAccount = 60,
+		},
+		[4] = {
+
+					type = DAILY_REWARD_TYPE_PREY_REROLL,
+			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
+			freeAccount = 3,
+			premiumAccount = 3,
+
+		},
+		[5] = {
+						type = DAILY_REWARD_TYPE_ITEM,
+			systemType = DAILY_REWARD_SYSTEM_TYPE_ONE,
+			items = { 28540, 28541, 28542, 28543, 28544, 28545, 44064, 50292 },
+			freeAccount = 1,
+			premiumAccount = 1,
+			itemCharges = 5000,
+		},
+		[6] = {
 			type = DAILY_REWARD_TYPE_XP_BOOST,
 			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
-			freeAccount = 10,
-			premiumAccount = 30,
+			freeAccount = 60,
+			premiumAccount = 60,
+		},
+		[7] = {
+			type = DAILY_REWARD_TYPE_PREY_REROLL,
+			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
+			freeAccount = 3,
+			premiumAccount = 3,
 		},
 		-- Storage reward template
 		--[[[5] = {

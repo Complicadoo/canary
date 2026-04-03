@@ -66,6 +66,8 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "We overcame the curse!", yell = false },
+	{ text = "The curse has no power here!", yell = false },
 }
 
 monster.loot = {
@@ -94,17 +96,18 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -300 },
-	{ name = "werelion wave", interval = 2000, chance = 20, minDamage = -150, maxDamage = -250, target = false },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -300, maxDamage = -410, range = 3, effect = CONST_ME_HOLYAREA, target = true },
-	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -170, maxDamage = -350, range = 3, shootEffect = CONST_ANI_HOLY, target = true },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -325 },
+	{ name = "werelionfireexplosion", interval = 2000, chance = 10, minDamage = -50, maxDamage = -350, target = false },
+	{ name = "werelion wave", interval = 2000, chance = 20, minDamage = -50, maxDamage = -250, target = false },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_HOLYDAMAGE, minDamage = -50, maxDamage = -425, range = 3, shootEffect = CONST_ANI_HOLY, target = true },
 }
 
 monster.defenses = {
 	defense = 40,
 	armor = 38,
 	mitigation = 0.91,
-	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HEALING, minDamage = 100, maxDamage = 150, effect = CONST_ME_MAGIC_BLUE, target = false },
+	{ name = "combat", interval = 2000, chance = 0, type = COMBAT_HEALING, minDamage = 100, maxDamage = 150, effect = CONST_ME_MAGIC_BLUE, target = false },
+	{ name = "speed", interval = 2000, chance = 10, speedChange = 200, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 4000 },
 }
 
 monster.elements = {

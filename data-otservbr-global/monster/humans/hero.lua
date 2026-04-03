@@ -80,7 +80,6 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 2815, chance = 45000 }, -- scroll
 	{ id = 2949, chance = 1640 }, -- lyre
 	{ name = "piggy bank", chance = 80 },
 	{ id = 3003, chance = 2190 }, -- rope
